@@ -21,7 +21,7 @@ Here are the steps to add service principal permissions to an Azure subscription
    * In the "Add role assignment" window, select the desired role from the list (e.g., "Contributor" for full access or a custom role with specific permissions).
    * In the "Assign access to" field, search for the name of the service principal (it should appear as an application) and select it from the list.
    * Click "Save" to add the role assignment.
-1. **Verify Permissions:**
+1. **Verify Permissions**:
 
    * After the role assignment is saved, the service principal will have the permissions associated with the assigned role within the subscription.
 The service principal can now access and manage resources within the subscription based on the permissions granted by the assigned role. Keep in mind that granting excessive permissions to a service principal can be a security risk, so it's essential to assign roles with the least privilege required for the service principal's intended tasks.

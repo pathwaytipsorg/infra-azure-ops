@@ -22,3 +22,18 @@ Setting up Terraform on Windows and verifying the installation involves the foll
 ```
 terraform --version
 ```
+1. **Verify Terraform Configuration:**
+
+   * Create a new directory for your Terraform project, and navigate to that directory in the command prompt.
+   * Create a new Terraform configuration file with the .tf extension (e.g., main.tf).
+   * Inside the configuration file, add some simple Terraform code, like creating a new resource group:
+```
+provider "azurerm" {
+  features {}
+}
+
+resource "azurerm_resource_group" "example" {
+  name     = "my-resource-group"
+  location = "East US"
+}
+```

@@ -34,6 +34,24 @@ provider "azurerm" {
 
 resource "azurerm_resource_group" "example" {
   name     = "my-resource-group"
-  location = "East US"
+  location = "Canada Central"
 }
+```
+   * Save the file and run the following command to initialize the Terraform configuration:
+```
+terraform init
+```
+   * After initialization, run the following command to see what changes will be applied:
+```
+terraform plan
+```
+   * Finally, apply the changes with the following command:
+```
+terraform apply
+```
+   * Confirm the changes by typing yes and pressing Enter.
+   * Now you can start building and managing your infrastructure with Terraform.
+   * If you want to clean up the environment, then destroy the infrastructure by executing the following command.
+```
+terraform destroy
 ```

@@ -13,7 +13,7 @@ Here are the steps to add service principal permissions to an Azure subscription
 1. Register the Application and Get the Client ID and Client Secret:
 
   * First, you need to register an application in Azure Active Directory (AD) and obtain the client ID and client secret (or certificate) for the service principal. This step is typically performed through the Azure portal or using Azure CLI/PowerShell.
-2. Assign a Role to the Service Principal:
+1. Assign a Role to the Service Principal:
 
   * Once you have the client ID and client secret, sign in to the Azure portal (or use Azure CLI/PowerShell) with an account that has sufficient permissions to manage roles in the subscription.
   * Go to the Azure portal and navigate to your subscription.
@@ -21,7 +21,7 @@ Here are the steps to add service principal permissions to an Azure subscription
   * In the "Add role assignment" window, select the desired role from the list (e.g., "Contributor" for full access or a custom role with specific permissions).
   * In the "Assign access to" field, search for the name of the service principal (it should appear as an application) and select it from the list.
   * Click "Save" to add the role assignment.
-3. Verify Permissions:
+1. Verify Permissions:
 
   * After the role assignment is saved, the service principal will have the permissions associated with the assigned role within the subscription.
 The service principal can now access and manage resources within the subscription based on the permissions granted by the assigned role. Keep in mind that granting excessive permissions to a service principal can be a security risk, so it's essential to assign roles with the least privilege required for the service principal's intended tasks.

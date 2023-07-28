@@ -8,6 +8,7 @@ terraform {
   }
 }
 
+# https://registry.terraform.io/providers/hashicorp/azurerm/2.0.0/docs/guides/service_principal_client_secret#creating-a-service-principal
 # Configure the Azure Provider
 provider "azurerm" {
   version = "= 2.0.0"  # Use the appropriate version

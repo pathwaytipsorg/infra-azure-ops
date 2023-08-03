@@ -1,9 +1,15 @@
-# Using the -var-file flag in Terraform has its advantages.  
+## .tfvars
 
-* Separation of Variables: Using -var-file allows you to separate your variable definitions from your main configuration, making it easier to manage and maintain your configuration files.
+* To parameterize and customize your configuration across different modules, environments, or use cases.
 
-* Environment-specific Configuration: You can create different .tfvars files for different environments (e.g.,development, staging, production), enabling you to customize variables without modifying your main configuration.
+Example:
+```
+terraform apply -var-file="dev.tfvars"
+```
 
-* Version Control: Storing variables in separate files makes it easier to manage version control. You can maintain different versions of your .tfvars files for different releases or branches.
+## locals
 
-* Collaboration: Teams can work more efficiently by sharing common variable files across multiple Terraform projects.
+* To simplify computations, reduce redundancy, and improve the readability of your configuration within a single module.
+
+## for_each
+* to create multiple instances of a resource, module, or other construct based on a map or set of values. This allows you to dynamically generate resources based on the elements of the given collection. The for_each argument is especially useful when you want to create and manage multiple similar resources with distinct attributes.

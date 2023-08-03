@@ -12,4 +12,5 @@ terraform apply -var-file="dev.tfvars"
 * To simplify computations, reduce redundancy, and improve the readability of your configuration within a single module.
 
 ## for_each
-* to create multiple instances of a resource, module, or other construct based on a map or set of values. This allows you to dynamically generate resources based on the elements of the given collection. The for_each argument is especially useful when you want to create and manage multiple similar resources with distinct attributes.
+* To create multiple instances of a resource, module, or other construct based on a map or set of values. This allows you to dynamically generate resources based on the elements of the given collection. 
+* The for_each argument is especially useful when you want to create and manage multiple similar resources with distinct attributes.

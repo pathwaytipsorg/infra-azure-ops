@@ -1,4 +1,4 @@
-Terraform code is creating an Azure Resource Group and a Virtual Network within that Resource Group:
+Terraform code is creating an Azure Resource Group and a Virtual Network within that Resource Group:->
 
 1. **Create a resource group**
    ```

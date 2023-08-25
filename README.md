@@ -25,45 +25,48 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 
    * Open a new command prompt window to ensure that the changes to the PATH take effect.
    * Run the following command to verify that Terraform is installed and accessible:
-```
-terraform --version
-```
+    ```
+    terraform --version
+    ```
+
 1. **Setup Azure Account:**
-```
-az config set core.allow_broker=true
-az account clear
-az login 
-```
+
+    ```
+    az config set core.allow_broker=true
+    az account clear
+    az login 
+    ```
+
 1. **Verify Terraform Configuration:**
 
    * Create a new directory for your Terraform project, and navigate to that directory in the command prompt.
    * Create a new Terraform configuration file with the .tf extension (e.g., main.tf).
    * Inside the configuration file, add some simple Terraform code, like creating a new resource group:
-```
-provider "azurerm" {
-  features {}
-}
-
-resource "azurerm_resource_group" "example" {
-  name     = "my-resource-group"
-  location = "Canada Central"
-}
-```
+    ```
+    provider "azurerm" {
+      features {}
+    }
+    
+    resource "azurerm_resource_group" "example" {
+      name     = "my-resource-group"
+      location = "Canada Central"
+    }
+    ```
    * Save the file and run the following command to initialize the Terraform configuration:
-```
-terraform init
-```
+    ```
+    terraform init
+    ```
    * After initialization, run the following command to see what changes will be applied:
-```
-terraform plan
-```
+    ```
+    terraform plan
+    ```
    * Finally, apply the changes with the following command:
-```
-terraform apply
-```
+    ```
+    terraform apply
+    ```
    * Confirm the changes by typing yes and pressing Enter.
    * Now you can start building and managing your infrastructure with Terraform.
    * If you want to clean up the environment, then destroy the infrastructure by executing the following command.
-```
-terraform destroy
-```
+    ```
+    terraform destroy
+    ```

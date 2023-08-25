@@ -28,6 +28,12 @@ https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 ```
 terraform --version
 ```
+1. **Setup Azure Account:**
+```
+az config set core.allow_broker=true
+az account clear
+az login 
+```
 1. **Verify Terraform Configuration:**
 
    * Create a new directory for your Terraform project, and navigate to that directory in the command prompt.

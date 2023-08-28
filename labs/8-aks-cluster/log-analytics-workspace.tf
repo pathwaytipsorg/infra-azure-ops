@@ -1,4 +1,4 @@
-# Create Log Analytics Workspace
+# Create Log Analytics Workspace. To store and analyze log data from various sources
 resource "azurerm_log_analytics_workspace" "insights" {
   name                = "logs-${random_string.myrandom.id}"
   location            = azurerm_resource_group.rg_pathway.location

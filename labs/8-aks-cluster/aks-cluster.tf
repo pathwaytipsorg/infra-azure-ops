@@ -30,12 +30,12 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
    } 
   }
 
-# Identity (System Assigned or Service Principal)
+# Identity (System Assigned or Service Principal): Here system will assign a managed identity to the cluster.
   identity {
     type = "SystemAssigned"
   }
 
-# Added June 2023
+# To configure Log Analytics integration for monitoring and insights.
 oms_agent {
   log_analytics_workspace_id = azurerm_log_analytics_workspace.insights.id
 }
@@ -45,13 +45,11 @@ azure_active_directory_role_based_access_control {
   admin_group_object_ids = [azuread_group.aks_administrators.id]
 }
 
-# Windows Profile
   windows_profile {
     admin_username = var.windows_admin_username
     admin_password = var.windows_admin_password
   }
 
-# Linux Profile
   linux_profile {
     admin_username = "ubuntu"
     ssh_key {
@@ -66,6 +64,6 @@ azure_active_directory_role_based_access_control {
   }
 
   tags = {
-    Environment = "dev"
+    Environment = var.environment
   }
 }
